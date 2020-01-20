@@ -45,12 +45,14 @@ var budgetController = (function()  {
 
             data.allItems[type].push(newItem);
             return newItem;
-        }
-    },
+        },
+    
 
-    testing = function() {
+    testing : function() {
 
         console.log(data);
+    }
+
     };
 
     
@@ -104,7 +106,7 @@ var UIController = (function()  {
             newHtml = newHtml.replace('%value%',obj.value);
             // Insert the HTML into the DOM
 
-            document.querySelector(element).insertAdjacentElement('beforeend',newHtml);
+            document.querySelector(element).insertAdjacentHTML('beforeend',newHtml);
         },
 
         getDOMstrings: function()   {
